@@ -19,7 +19,7 @@ Collection used in Swift 2.0
 
 1. SLCNotice
 <br/>
-<img style="width:80px" src="https://github.com/liu1013269528/Collection/blob/master/CollectionGIF/SwiftNotice.gif" alt="" />
+<img style="width:80px" src="https://github.com/liu1013269528/Collection/blob/master/CollectionGIF/SLCNotice.gif" alt="" />
 2. SwiftNotice
 <br/>
 <img style="width:80px" src="https://github.com/liu1013269528/Collection/blob/master/CollectionGIF/SwiftNotice.gif" alt="" />
