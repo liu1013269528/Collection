@@ -32,4 +32,4 @@ Collection used in Swift 2.0
 
 It's just a beginning!!
 
-Next, I will put some GIFs to show how the project is working
+Next, I will put some GIF to show how the project is working
