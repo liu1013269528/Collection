@@ -26,6 +26,7 @@ class CNPPopupDemoViewController: UIViewController,CNPPopupControllerDelegate {
         btn.selectionHandler = {(btn) in
             let title = btn.titleLabel?.text
             print(title)
+            self.popupController.dismissPopupControllerAnimated(true)
         }
         
         let customView = UIView(frame: CGRectMake(0, 0, 250, 55))
