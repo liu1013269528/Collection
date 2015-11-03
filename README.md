@@ -10,18 +10,22 @@ Collection used in Swift 2.0
 #List of MyDemo
 
 1. ClosureBake
-    ![alt tag](https://github.com/liu1013269528/Collection/blob/master/CollectionGIF/ClosureBack.gif)
+<br/>
+<img style="width:80px" src="https://github.com/liu1013269528/Collection/blob/master/CollectionGIF/ClosureBack.gif" alt="" />
 
 
 
 #List of ThirdParty
 
 1. SLCNotice
-    ![alt tag](https://github.com/liu1013269528/Collection/blob/master/CollectionGIF/SLCNotice.gif)
+<br/>
+<img style="width:80px" src="https://github.com/liu1013269528/Collection/blob/master/CollectionGIF/SwiftNotice.gif" alt="" />
 2. SwiftNotice
-    ![alt tag](https://github.com/liu1013269528/Collection/blob/master/CollectionGIF/SwiftNotice.gif)
+<br/>
+<img style="width:80px" src="https://github.com/liu1013269528/Collection/blob/master/CollectionGIF/SwiftNotice.gif" alt="" />
 3. CNPPopup
-    ![alt tag](https://github.com/liu1013269528/Collection/blob/master/CollectionGIF/CNPPopup.gif)
+<br/>
+<img style="width:80px" src="https://github.com/liu1013269528/Collection/blob/master/CollectionGIF/CNPPopup.gif" alt="" />
 4. KLCPopup(UnFinished)
 5. Pitaya(UnFinished)
 6. Neon(UnFinished)
