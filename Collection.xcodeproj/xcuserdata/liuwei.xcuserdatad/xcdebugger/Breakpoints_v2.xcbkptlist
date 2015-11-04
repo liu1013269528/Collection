@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Collection/Controller/Demos/CNPPopupDemo/CNPPopupDemoViewController.swift"
-            timestampString = "468126971.753104"
+            timestampString = "468296231.962733"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
             landmarkName = "showPopupWithStyle(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Collection/Controller/Demos/CNPPopupDemo/CNPPopupDemoViewController.swift"
-            timestampString = "468233473.841095"
+            timestampString = "468296231.962733"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "labelFormat(_:labelFont:labelColor:)"
             landmarkType = "5">
          </BreakpointContent>

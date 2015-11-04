@@ -4,12 +4,60 @@ import UIKit
 
 class CNPPopupDemoViewController: UIViewController,CNPPopupControllerDelegate {
 
-    @IBOutlet weak var content: UITextField!
+
+    @IBOutlet weak var content: UIButton!
     var popupController = CNPPopupController()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.content.tag = 1
+        self.content.addTarget(self, action: "sendValue:", forControlEvents: UIControlEvents.TouchUpInside)
     }
+    
+    func sendValue(sender: UITextField) {
+        let presentContent = self.view.viewWithTag(sender.tag) as! UIButton
+        let presentString = presentContent.titleLabel?.text
+        showPop(sender.tag, string: presentString, popupStyle: CNPPopupStyle.Centered)
+    }
+    
+    func showPop(tag: Int,string: String?, popupStyle: CNPPopupStyle){
+        let label1 = labelFormat("请输入下面内容", labelFont: 24)
+        
+        let customView = UIView(frame: CGRectMake(0, 0, 250, 55))
+        customView.backgroundColor = UIColor.lightGrayColor()
+        let textField = UITextField(frame: CGRectMake(10, 10, 230, 35))
+        textField.borderStyle = UITextBorderStyle.RoundedRect
+        textField.placeholder = "请输入内容"
+        textField.text = string
+        textField.returnKeyType = UIReturnKeyType.Done
+        customView.addSubview(textField)
+        
+        let btn = CNPPopupButton(frame: CGRectMake(0, 0, 200, 60))
+        btn.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+        btn.titleLabel?.font = UIFont.boldSystemFontOfSize(18)
+        btn.setTitle("关闭", forState: UIControlState.Normal)
+        btn.backgroundColor = UIColor(red: 0.46, green: 0.8, blue: 1.0, alpha: 1.0)
+        btn.layer.cornerRadius = 4
+        btn.selectionHandler = {(btn) in
+            let newString = textField.text
+            self.getValue(tag, newString: newString)
+            self.popupController.dismissPopupControllerAnimated(true)
+        }
+        
+        self.popupController = CNPPopupController(contents: [label1,customView,btn])
+        self.popupController.theme = CNPPopupTheme.defaultTheme()
+        self.popupController.theme.popupStyle = popupStyle
+        self.popupController.delegate = self
+        self.popupController.presentPopupControllerAnimated(true)
+        
+        textField.resignFirstResponder()
+    }
+    
+    func getValue(tag: Int, newString: String?) {
+        let getTextField = self.view.viewWithTag(tag) as! UIButton
+        getTextField.setTitle(newString, forState: UIControlState.Normal)
+    }
+    
+    
     
     
     func showPopupWithStyle(popupStyle: CNPPopupStyle) {
@@ -82,12 +130,21 @@ class CNPPopupDemoViewController: UIViewController,CNPPopupControllerDelegate {
         print("打开")
     }
     
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
+}
+
+extension CNPPopupDemoViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(textField:UITextField) -> Bool
+    {
+        //收起键盘
+        textField.resignFirstResponder()
+        print(textField.text)
+        return true;
+    }
 }
