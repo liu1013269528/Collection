@@ -29,6 +29,7 @@
 		011BFF0E1BE9A56200FBA791 /* SLCNotice.gif in Resources */ = {isa = PBXBuildFile; fileRef = 011BFF091BE9A56200FBA791 /* SLCNotice.gif */; };
 		011BFF0F1BE9A56200FBA791 /* SwiftNotice.gif in Resources */ = {isa = PBXBuildFile; fileRef = 011BFF0A1BE9A56200FBA791 /* SwiftNotice.gif */; };
 		011BFF101BE9A56200FBA791 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 011BFF0B1BE9A56200FBA791 /* README.md */; };
+		011BFF141BE9E23A00FBA791 /* TableListPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011BFF131BE9E23A00FBA791 /* TableListPopup.swift */; };
 		01A13C3C1BE3672100C77163 /* loading1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A13C351BE3672100C77163 /* loading1@2x.png */; };
 		01A13C3D1BE3672100C77163 /* loading2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A13C361BE3672100C77163 /* loading2@2x.png */; };
 		01A13C3E1BE3672100C77163 /* loading3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 01A13C371BE3672100C77163 /* loading3@2x.png */; };
@@ -64,6 +65,7 @@
 		011BFF091BE9A56200FBA791 /* SLCNotice.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SLCNotice.gif; sourceTree = "<group>"; };
 		011BFF0A1BE9A56200FBA791 /* SwiftNotice.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = SwiftNotice.gif; sourceTree = "<group>"; };
 		011BFF0B1BE9A56200FBA791 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		011BFF131BE9E23A00FBA791 /* TableListPopup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableListPopup.swift; sourceTree = "<group>"; };
 		01A13C351BE3672100C77163 /* loading1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading1@2x.png"; sourceTree = "<group>"; };
 		01A13C361BE3672100C77163 /* loading2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading2@2x.png"; sourceTree = "<group>"; };
 		01A13C371BE3672100C77163 /* loading3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "loading3@2x.png"; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		010734FC1BE30F8D007BB189 /* Collection */ = {
 			isa = PBXGroup;
 			children = (
+				011BFF111BE9E07800FBA791 /* Lib */,
 				0107352A1BE34250007BB189 /* ThirdParty */,
 				010735211BE3317E007BB189 /* Asset */,
 				010735121BE31030007BB189 /* Controller */,
@@ -272,6 +275,22 @@
 			path = CollectionGIF;
 			sourceTree = "<group>";
 		};
+		011BFF111BE9E07800FBA791 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				011BFF121BE9E07800FBA791 /* MyPopup */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		011BFF121BE9E07800FBA791 /* MyPopup */ = {
+			isa = PBXGroup;
+			children = (
+				011BFF131BE9E23A00FBA791 /* TableListPopup.swift */,
+			);
+			path = MyPopup;
+			sourceTree = "<group>";
+		};
 		01A13C341BE3672100C77163 /* Loading */ = {
 			isa = PBXGroup;
 			children = (
@@ -383,6 +402,7 @@
 				010735311BE34299007BB189 /* SCLAlertDemoViewController.swift in Sources */,
 				0107353A1BE351E6007BB189 /* SwiftNoticeDemoViewController.swift in Sources */,
 				0107351D1BE316A8007BB189 /* DemoListCell.swift in Sources */,
+				011BFF141BE9E23A00FBA791 /* TableListPopup.swift in Sources */,
 				010735061BE30F8D007BB189 /* Collection.xcdatamodeld in Sources */,
 				011BFF101BE9A56200FBA791 /* README.md in Sources */,
 				011BFF031BE7073600FBA791 /* LWRootViewController.swift in Sources */,

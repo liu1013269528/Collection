@@ -42,28 +42,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Collection/Controller/Demos/CNPPopupDemo/CNPPopupDemoViewController.swift"
-            timestampString = "468296231.962733"
+            timestampString = "468318431.961526"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "73"
-            endingLineNumber = "73"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "showPopupWithStyle(_:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Collection/Controller/Demos/CNPPopupDemo/CNPPopupDemoViewController.swift"
-            timestampString = "468296231.962733"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
-            landmarkName = "labelFormat(_:labelFont:labelColor:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -113,6 +97,22 @@
             endingLineNumber = "51"
             landmarkName = "action()"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Collection/Lib/MyPopup/TableListPopup.swift"
+            timestampString = "468318397.592183"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
+            landmarkName = "TableListPopup"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

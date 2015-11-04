@@ -6,11 +6,14 @@ class CNPPopupDemoViewController: UIViewController,CNPPopupControllerDelegate {
 
 
     @IBOutlet weak var content: UIButton!
+    @IBOutlet weak var selectContent: UIButton!
     var popupController = CNPPopupController()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.content.tag = 1
+        self.selectContent.tag = 2
         self.content.addTarget(self, action: "sendValue:", forControlEvents: UIControlEvents.TouchUpInside)
+        self.selectContent.addTarget(self, action: "popTableList:", forControlEvents: UIControlEvents.TouchUpInside)
     }
     
     func sendValue(sender: UITextField) {
@@ -49,7 +52,8 @@ class CNPPopupDemoViewController: UIViewController,CNPPopupControllerDelegate {
         self.popupController.delegate = self
         self.popupController.presentPopupControllerAnimated(true)
         
-        textField.resignFirstResponder()
+        textField.becomeFirstResponder()
+
     }
     
     func getValue(tag: Int, newString: String?) {
@@ -58,6 +62,17 @@ class CNPPopupDemoViewController: UIViewController,CNPPopupControllerDelegate {
     }
     
     
+    func popTableList(sender: AnyObject) {
+        let popList = TableListPopup(dataList: ["项目一", "项目二", "项目三", "项目四", "项目五", "项目六", "项目七"], popStype: .Centered, tag: sender.tag, myClosure: getSelectValue)
+        self.popupController = popList.initListPopupControllers()
+        self.popupController.delegate = self
+        self.popupController.presentPopupControllerAnimated(true)
+    }
+    
+    func getSelectValue(tag: Int, string: String) {
+        let presentBtn = self.view.viewWithTag(tag) as! UIButton
+        presentBtn.setTitle(string, forState: UIControlState.Normal)
+    }
     
     
     func showPopupWithStyle(popupStyle: CNPPopupStyle) {
@@ -87,7 +102,7 @@ class CNPPopupDemoViewController: UIViewController,CNPPopupControllerDelegate {
         self.popupController = CNPPopupController(contents: [label1,label2,customView,btn])
         self.popupController.theme = CNPPopupTheme.defaultTheme()
         self.popupController.theme.popupStyle = popupStyle
-        
+
         self.popupController.delegate = self
         self.popupController.presentPopupControllerAnimated(true)
         
