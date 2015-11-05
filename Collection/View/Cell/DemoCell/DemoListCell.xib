@@ -58,7 +58,7 @@
                 <outlet property="cellImg" destination="WFG-9U-lBm" id="hCO-BE-dxu"/>
                 <outlet property="cellLabel" destination="Pha-5x-fZg" id="UWv-EA-4GV"/>
             </connections>
-            <point key="canvasLocation" x="267.5" y="172"/>
+            <point key="canvasLocation" x="325.5" y="185"/>
         </tableViewCell>
     </objects>
 </document>
