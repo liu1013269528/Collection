@@ -28,7 +28,7 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     func showData()
     {
-        self.tableData = (["SLC提示组件", "SwiftNotice组件--JohnLui", "CNPPopup组件","闭包回调","KLCPopup组件","Pitaya网络组件","Neon布局组件"], ["SCLAlert", "SwiftNotice", "CNPPopup","ClosureBack","","",""])
+        self.tableData = (["SLC提示组件", "SwiftNotice组件--JohnLui", "CNPPopup组件","闭包回调","页面跳转", "KLCPopup组件","Pitaya网络组件","Neon布局组件"], ["SCLAlert", "SwiftNotice", "CNPPopup","ClosureBack","ViewJump","","",""])
         self.demoList.reloadData()
     }
     
@@ -71,6 +71,8 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             nextView = storyboard.instantiateViewControllerWithIdentifier(storyID) as! CNPPopupDemoViewController
         case "ClosureBack":
             nextView = LWRootViewController()
+        case "ViewJump":
+            nextView = storyboard.instantiateViewControllerWithIdentifier("ViewJump") as! ViewJumpViewController
         default:
             nextView = storyboard.instantiateViewControllerWithIdentifier("SCLAlert") as! SCLAlertDemoViewController
         }

@@ -186,6 +186,70 @@
             </objects>
             <point key="canvasLocation" x="760.5" y="995"/>
         </scene>
+        <!--View Jump View Controller-->
+        <scene sceneID="NOJ-pb-Ipz">
+            <objects>
+                <viewController storyboardIdentifier="ViewJump" id="ccM-Kw-d4W" customClass="ViewJumpViewController" customModule="Collection" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1wY-9i-ihq"/>
+                        <viewControllerLayoutGuide type="bottom" id="8TV-gU-qT4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kN6-Hn-pBC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dS8-jC-N7d">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="NavigationJump"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQf-lO-pwl">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="UIViewJump"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cQf-lO-pwl" firstAttribute="centerY" secondItem="kN6-Hn-pBC" secondAttribute="centerY" id="Jip-F6-3Ua"/>
+                            <constraint firstItem="cQf-lO-pwl" firstAttribute="centerX" secondItem="kN6-Hn-pBC" secondAttribute="centerX" id="Mpz-gQ-T9j"/>
+                            <constraint firstItem="dS8-jC-N7d" firstAttribute="centerX" secondItem="kN6-Hn-pBC" secondAttribute="centerX" id="pjU-gd-qTL"/>
+                            <constraint firstItem="dS8-jC-N7d" firstAttribute="centerY" secondItem="kN6-Hn-pBC" secondAttribute="centerY" id="tOz-nW-yCY">
+                                <variation key="widthClass=compact" constant="-100"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="dS8-jC-N7d"/>
+                                <exclude reference="cQf-lO-pwl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="Jip-F6-3Ua"/>
+                                <exclude reference="Mpz-gQ-T9j"/>
+                                <exclude reference="pjU-gd-qTL"/>
+                                <exclude reference="tOz-nW-yCY"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="dS8-jC-N7d"/>
+                                <include reference="cQf-lO-pwl"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="Jip-F6-3Ua"/>
+                                <include reference="Mpz-gQ-T9j"/>
+                                <include reference="pjU-gd-qTL"/>
+                                <include reference="tOz-nW-yCY"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="naviJump" destination="dS8-jC-N7d" id="qMk-mz-sl5"/>
+                        <outlet property="viewJump" destination="cQf-lO-pwl" id="V5o-RX-YaM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ECB-UA-l2E" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536" y="726"/>
+        </scene>
         <!--Swift Notice Demo View Controller-->
         <scene sceneID="0tf-Re-9xm">
             <objects>
@@ -406,7 +470,7 @@
                                     </constraint>
                                 </constraints>
                                 <state key="normal">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -612,6 +676,65 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iHX-86-jQ0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1383" y="298"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="sBq-X5-EMO">
+            <objects>
+                <viewController storyboardIdentifier="LoginView" id="O4a-ZU-r5A" customClass="LoginViewController" customModule="Collection" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cQI-oB-V9B"/>
+                        <viewControllerLayoutGuide type="bottom" id="p3Z-Qh-9ht"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Amn-3O-TBP">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ZH-Rd-k9U">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <state key="normal" title="X"/>
+                                <connections>
+                                    <action selector="back:" destination="O4a-ZU-r5A" eventType="touchUpInside" id="ANd-lG-yGD"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YA8-rU-FNa">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.72941176470000002" blue="0.44705882349999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="80" y="126" width="240" height="128"/>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2ZH-Rd-k9U" firstAttribute="centerX" secondItem="Amn-3O-TBP" secondAttribute="centerX" id="T8e-ja-3r3"/>
+                            <constraint firstItem="2ZH-Rd-k9U" firstAttribute="centerY" secondItem="Amn-3O-TBP" secondAttribute="centerY" id="y9P-jo-UUM"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="2ZH-Rd-k9U"/>
+                                <exclude reference="YA8-rU-FNa"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="T8e-ja-3r3"/>
+                                <exclude reference="y9P-jo-UUM"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="2ZH-Rd-k9U"/>
+                                <include reference="YA8-rU-FNa"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="T8e-ja-3r3"/>
+                                <include reference="y9P-jo-UUM"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HcE-XT-DbL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1690.5" y="86"/>
         </scene>
     </scenes>
 </document>
