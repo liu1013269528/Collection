@@ -1,7 +1,7 @@
 
 import UIKit
 
-class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class MainViewController: UIViewController {
 
     var demoList = UITableView()
     
@@ -23,16 +23,22 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         self.demoList.dataSource = self
         self.view.addSubview(self.demoList)
         self.showData()
-        
     }
     
     func showData()
     {
-        self.tableData = (["SLC提示组件", "SwiftNotice组件--JohnLui", "CNPPopup组件","闭包回调","页面跳转", "KLCPopup组件","Pitaya网络组件","Neon布局组件"], ["SCLAlert", "SwiftNotice", "CNPPopup","ClosureBack","ViewJump","","",""])
+        self.tableData = (["SLC提示组件", "SwiftNotice组件--JohnLui", "CNPPopup组件","闭包回调","页面跳转", "计算器","代码layout布局组件--Snapkit", "KLCPopup组件","Pitaya网络组件","Neon布局组件"], ["SCLAlert", "SwiftNotice", "CNPPopup","ClosureBack","ViewJump","Calculator","snapkit","","",""])
         self.demoList.reloadData()
     }
     
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+}
+
+extension MainViewController: UITableViewDataSource {
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
@@ -55,7 +61,9 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         return cell
     }
-    
+}
+
+extension MainViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
         let index = indexPath.row
@@ -73,6 +81,10 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
             nextView = LWRootViewController()
         case "ViewJump":
             nextView = storyboard.instantiateViewControllerWithIdentifier("ViewJump") as! ViewJumpViewController
+        case "Calculator":
+            nextView = storyboard.instantiateViewControllerWithIdentifier("Calculator") as! CalculatorViewController
+        case "snapkit":
+            nextView = SnapkitViewController()
         default:
             nextView = storyboard.instantiateViewControllerWithIdentifier("SCLAlert") as! SCLAlertDemoViewController
         }
@@ -82,12 +94,5 @@ class MainViewController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
     {
         return 50
-    }
-    
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 }
